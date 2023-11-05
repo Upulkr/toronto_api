@@ -29,7 +29,7 @@ app.get('*',(req,res)=>{
 
 app.use(express.json());
 
-app.listen(5000, () => {
+app.listen(3000, () => {
   console.log("Server running on port 3000");
 });
 
