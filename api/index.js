@@ -2,13 +2,13 @@ import express from "express";
 import mongoose from "mongoose";
 import bookingRouter from "./routes/booking.route.js";
 import path from "path";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
 
-dotenv.config();
+// dotenv.config();
 
 mongoose
-  .connect(process.env.MONGO)
+  .connect('mongodb+srv://saloontoronto:saloontoronto@booking.makscrx.mongodb.net/?retryWrites=true&w=majority')
   .then(() => {
     console.log("connected to MongoDB");
   })
