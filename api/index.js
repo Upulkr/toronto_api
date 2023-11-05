@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import bookingRouter from "./routes/booking.route.js";
 import path from "path";
+import cors from 'cors'
 // import dotenv from "dotenv";
 
 
@@ -19,7 +20,9 @@ mongoose
 
 const __dirname = path.resolve()
 const app = express();
-
+app.use(cors({
+  origin: '*'
+}));
 
 app.use(express.static(path.join(__dirname, 'client/dist')))
 
