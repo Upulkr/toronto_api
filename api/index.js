@@ -29,8 +29,8 @@ app.get('*',(req,res)=>{
 
 app.use(express.json());
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
 });
 
 app.use("/api", bookingRouter);
@@ -44,3 +44,4 @@ app.use((err, req, res, next) => {
     message,
   });
 });
+module.exports = app;
